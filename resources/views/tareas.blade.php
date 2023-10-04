@@ -26,10 +26,16 @@
     <form action="{{route('eliminar')}}" method="post">
         <input type="text" name="id"> </input>
         <button type="submit">eliminar</button>
+</form>
     </form>  <form action="{{route('recuperar')}}" method="post">
         <input type="text" name="id"> </input>
         <button type="submit">recuperar</button>
     </form>
+    <br>
+    <form action="{{route('titulo')}}" method="post">
+        <input type="text" name="titulo"> </input>
+        <button type="submit">buscar titulo</button>
+</form>
     
 </body>
 </html>

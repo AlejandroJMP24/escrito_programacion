@@ -65,4 +65,33 @@ class tareasController extends Controller
             return response()->json($e->getMessage());
         }
     }
+
+    public function buscarTitulo(Request $request)
+    {
+        try {
+            $datos = [];
+            $listaTareas = tareas::where('titulo', $request->input('titulo'))->get();
+            foreach ($listaTareas as $tarea) {
+                $datos[] = [
+                    'id' => $tarea->id,
+                    'titulo' => $tarea->titulo,
+                    'contenido' => $tarea->contenido,
+                    'estado' => $tarea->estado,
+                    'autor' => $tarea->autor,
+                ];
+            }
+            return response()->json($datos);
+        } catch (\Exception $e) {
+            return response()->json($e->getMessage());
+        }
+
+    }
+    public function buscarAutor(Request $request)
+    {
+
+    }
+    public function buscarEstado(Request $request)
+    {
+
+    }
 }

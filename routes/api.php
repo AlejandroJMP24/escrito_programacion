@@ -22,3 +22,4 @@ Route::post('/agregar', [tareasController::class, 'crearTarea'])->name('agregar'
 Route::post('/modificar', [tareasController::class, 'modificarTarea'])->name('modificar');
 Route::post('/eliminar', [tareasController::class, 'eliminarTarea'])->name('eliminar');
 Route::post('/recuperar', [tareasController::class, 'recuperarTarea'])->name('recuperar');
+Route::post('/titulo', [tareasController::class, 'buscarTitulo'])->name('titulo');
